@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          'Home Screen',
+          'Home Screen New',
           style:
               GoogleFonts.quicksand(fontSize: 50, fontWeight: FontWeight.bold),
         ),
