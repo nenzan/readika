@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:readika/app/app.view.dart';
 
 void main() {
-  runApp(Root());
+  runApp(const Root());
 }
 
 class Root extends StatelessWidget {
@@ -10,7 +10,7 @@ class Root extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: App(),
       debugShowCheckedModeBanner: false,
     );

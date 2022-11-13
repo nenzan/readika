@@ -1,11 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pmvvm/pmvvm.dart';
 import 'package:readika/app/module/home/home.view.dart';
 import 'package:readika/app/module/onboarding/widget/onboarding_widget.dart';
 import 'package:readika/core/assets/app_images.dart';
-import 'package:readika/core/style/app_color.dart';
 import 'package:readika/core/style/app_values.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -13,7 +11,7 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: OnboardingScreenView(),
       debugShowCheckedModeBanner: false,
     );
@@ -21,6 +19,8 @@ class OnboardingScreen extends StatelessWidget {
 }
 
 class OnboardingScreenView extends StatefulWidget {
+  const OnboardingScreenView({super.key});
+
   @override
   _OnboardingScreenState createState() => _OnboardingScreenState();
 }
@@ -116,12 +116,12 @@ class _OnboardingScreenState extends State<OnboardingScreenView> {
                             if (currentIndex == 2) {
                               onChangedSlide(1);
                               _controller.animateToPage(1,
-                                  duration: Duration(milliseconds: 500),
+                                  duration: const Duration(milliseconds: 500),
                                   curve: Curves.ease);
                             } else if (currentIndex == 1) {
                               onChangedSlide(0);
                               _controller.animateToPage(0,
-                                  duration: Duration(milliseconds: 500),
+                                  duration: const Duration(milliseconds: 500),
                                   curve: Curves.ease);
                             }
                           },
@@ -129,9 +129,9 @@ class _OnboardingScreenState extends State<OnboardingScreenView> {
                             'Back',
                             style: GoogleFonts.signika(
                                 fontSize: AppValues.size_16,
-                                color: Color(0xff6c63ff)),
+                                color: const Color(0xff6c63ff)),
                           ))),
-                  SizedBox(
+                  const SizedBox(
                     width: 16,
                   ),
                   GestureDetector(
@@ -139,25 +139,25 @@ class _OnboardingScreenState extends State<OnboardingScreenView> {
                         if (currentIndex == 0) {
                           onChangedSlide(1);
                           _controller.animateToPage(1,
-                              duration: Duration(milliseconds: 500),
+                              duration: const Duration(milliseconds: 500),
                               curve: Curves.ease);
                         } else if (currentIndex == 1) {
                           onChangedSlide(2);
                           _controller.animateToPage(2,
-                              duration: Duration(milliseconds: 500),
+                              duration: const Duration(milliseconds: 500),
                               curve: Curves.ease);
                         } else {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HomeScreen()));
+                                  builder: (context) => const HomeScreen()));
                         }
                       },
                       child: Text(
                         currentIndex == 2 ? 'Finish' : 'Next',
                         style: GoogleFonts.signika(
                             fontSize: AppValues.size_16,
-                            color: Color(0xff6c63ff)),
+                            color: const Color(0xff6c63ff)),
                       ))
                 ],
               ),
