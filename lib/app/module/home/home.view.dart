@@ -182,7 +182,10 @@ class _HomeScreenView extends StatelessView<HomeVm> {
                             borderRadius: BorderRadius.circular(8)),
                         child: Row(
                           children: [
-                            Icon(Icons.book_outlined, color: Colors.white,),
+                            Icon(
+                              Icons.book_outlined,
+                              color: Colors.white,
+                            ),
                             SizedBox(
                               width: 4,
                             ),
@@ -196,6 +199,57 @@ class _HomeScreenView extends StatelessView<HomeVm> {
                 padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Text(
                   'Hottest books',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
+              ),
+              Row(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(right: 16, left: 8),
+                    height: 150,
+                    width: 100,
+                    decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(8))),
+                    child: Image.network(
+                        'https://s3-ap-southeast-1.amazonaws.com/ebook-previews/51104/195325/1.jpg'),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(right: 16),
+                    height: 150,
+                    width: 100,
+                    decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(8))),
+                    child: Image.network(
+                        'https://m.media-amazon.com/images/I/513LYPt7xtL.jpg'),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(right: 16),
+                    height: 150,
+                    width: 100,
+                    decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(8))),
+                    child: Image.network(
+                        'https://static.wikia.nocookie.net/solo-leveling/images/b/bf/Solo_Leveling_Returns.png/revision/latest?cb=20200715031557'),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                child: Text(
+                  'Whats\'s your friend read',
                   textAlign: TextAlign.left,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
