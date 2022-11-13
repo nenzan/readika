@@ -25,7 +25,7 @@ class _SplashScreenView extends StatelessView<SplashScreenVm> {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(
+          const Icon(
             Icons.book_outlined,
             size: 200,
           ),

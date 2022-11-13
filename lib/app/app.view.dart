@@ -6,6 +6,7 @@ import 'package:readika/app/module/splash/splash.view.dart';
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
 
+  @override
   Widget build(context) {
     return MVVM<AppVm>(
       view: () => _AppView(),
@@ -17,7 +18,8 @@ class App extends StatelessWidget {
 class _AppView extends StatelessView<AppVm> {
   const _AppView({Key? key}) : super(key: key);
 
+  @override
   Widget render(context, vm) {
-    return SplashScreen();
+    return const SplashScreen();
   }
 }
