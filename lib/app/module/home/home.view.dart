@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:pmvvm/mvvm_builder.widget.dart';
 import 'package:pmvvm/pmvvm.dart';
+import 'package:readika/app/module/detail/detail.view.dart';
 import 'package:readika/app/module/home/home.vm.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,12 +22,13 @@ class _HomeScreenView extends StatelessView<HomeVm> {
         child: Scaffold(
       body: SingleChildScrollView(
         child: Container(
+          padding: EdgeInsets.only(bottom: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 padding: const EdgeInsets.only(top: 16, bottom: 32),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Color(0xFFFDB137),
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(16),
@@ -256,15 +258,24 @@ class _HomeScreenView extends StatelessView<HomeVm> {
               ),
               Row(
                 children: [
-                  Container(
-                    margin: const EdgeInsets.only(right: 16, left: 8),
-                    height: 150,
-                    width: 100,
-                    decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(8))),
-                    child: Image.network(
-                        'https://s3-ap-southeast-1.amazonaws.com/ebook-previews/51104/195325/1.jpg'),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const DetailScreen()),
+                      );
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.only(right: 16, left: 8),
+                      height: 150,
+                      width: 100,
+                      decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(8))),
+                      child: Image.network(
+                          'https://s3-ap-southeast-1.amazonaws.com/ebook-previews/51104/195325/1.jpg'),
+                    ),
                   ),
                   SizedBox(
                     width: 8,
