@@ -64,7 +64,7 @@ class _DetailScreenView extends StatelessView<DetailVm> {
                   SingleChildScrollView(
                     child: Center(
                       child: Container(
-                        padding: EdgeInsets.only(top: 16, left: 16, right: 16),
+                        padding: EdgeInsets.all(16),
                         child: Column(
                           children: [
                             Container(
@@ -220,6 +220,52 @@ class _DetailScreenView extends StatelessView<DetailVm> {
                               style: GoogleFonts.lato(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w400),
+                            ),
+                            SizedBox(
+                              height: 32,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    height: 45,
+                                    width: 45,
+                                    padding: EdgeInsets.all(8),
+                                    decoration: BoxDecoration(
+                                      color: Colors.black,
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: Icon(
+                                      Icons.bookmark,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  flex: 3,
+                                ),
+                                SizedBox(
+                                  width: 16,
+                                ),
+                                Expanded(
+                                  child: Container(
+                                    height: 45,
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 16, vertical: 8),
+                                    decoration: BoxDecoration(
+                                      color: Colors.black,
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: Center(
+                                        child: Text(
+                                      'Continue your reading',
+                                      textAlign: TextAlign.center,
+                                      style:
+                                          GoogleFonts.lato(color: Colors.white),
+                                    )),
+                                  ),
+                                  flex: 20,
+                                ),
+                              ],
                             )
                           ],
                         ),
